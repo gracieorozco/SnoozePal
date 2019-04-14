@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <application
+        android:id="@+id/application"
+        android:label="@string/turns_up_in_manage_apps">
+
+        <activity
+            android:name=".SnoozePals"
+            android:label="@string/turns_up_in_shortcuts">
+            ...
+        </activity>
+    </application>
+
+    <EditText
+        android:id="@+id/alarmAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="102dp"
+        android:layout_marginBottom="101dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:typeface="monospace"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/number"
+        app:layout_constraintStart_toEndOf="@+id/alarmLabel"
+        app:layout_constraintTop_toBottomOf="@+id/hourLabel" />
+
+    <EditText
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_marginEnd="69dp"
+        android:layout_marginRight="69dp"
+        android:layout_marginBottom="233dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/numberLabel" />
+
+    <EditText
+        android:id="@+id/friend"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="69dp"
+        android:layout_marginRight="69dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/whowouldyouliketocontact"
+        app:layout_constraintTop_toBottomOf="@+id/number" />
+
+    <EditText
+        android:id="@+id/minuteInput"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_marginTop="67dp"
+        android:layout_marginBottom="67dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/alarmAmount"
+        app:layout_constraintStart_toStartOf="@+id/hourInput"
+        app:layout_constraintTop_toTopOf="@+id/hourInput" />
+
+    <TextView
+        android:id="@+id/minuteLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="28dp"
+        android:text="Minutes"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorPrimary"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/alarmAmount"
+        app:layout_constraintEnd_toStartOf="@+id/minuteInput"
+        app:layout_constraintTop_toTopOf="@+id/minuteInput"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/alarmLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginBottom="71dp"
+        android:text="# of Alarms"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorPrimary"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/dayLabel"
+        app:layout_constraintEnd_toStartOf="@+id/dayInput"
+        app:layout_constraintTop_toTopOf="@+id/minuteLabel" />
+
+    <TextView
+        android:id="@+id/numberLabel"
+        android:layout_width="0dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="18dp"
+        android:text="Phone Number"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorPrimary"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/friend"
+        app:layout_constraintEnd_toStartOf="@+id/number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/number" />
+
+    <TextView
+        android:id="@+id/whowouldyouliketocontact"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginTop="170dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="171dp"
+        android:text="Who to notify?"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorPrimary"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/friend"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dayInput"
+        app:layout_constraintVertical_bias="0.875" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginBottom="79dp"
+        android:text="Set Alarm"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/friend" />
+
+    <EditText
+        android:id="@+id/hourInput"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:visibility="visible"
+        app:layout_constraintBaseline_toBaselineOf="@+id/hourLabel"
+        app:layout_constraintEnd_toEndOf="@+id/alarmAmount"
+        app:layout_constraintStart_toStartOf="@+id/alarmAmount" />
+
+    <TextView
+        android:id="@+id/hourLabel"
+        android:layout_width="31dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="187dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:text="Hour"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorPrimary"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/hourInput"
+        app:layout_constraintStart_toStartOf="@+id/minuteLabel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="179dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="82dp"
+        android:layout_marginBottom="83dp"
+        android:text="SnoozePal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorPrimary"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="@+id/hourInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:onClick="onSend"
+        android:text="Send"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="@+id/friend"
+        app:layout_constraintTop_toTopOf="@+id/button" />
+
+    <TextView
+        android:id="@+id/dayLabel"
+        android:layout_width="54dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="95dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="94dp"
+        android:text="AM or PM"
+        android:textColor="@color/colorPrimary"
+        android:textSize="12sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/friend"
+        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintStart_toStartOf="@+id/whowouldyouliketocontact"
+        app:layout_constraintTop_toTopOf="@+id/alarmAmount" />
+
+    <EditText
+        android:id="@+id/dayInput"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginLeft="14dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="@color/colorPrimary"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/dayLabel"
+        app:layout_constraintStart_toEndOf="@+id/dayLabel"
+        app:layout_constraintTop_toTopOf="@+id/dayLabel" />
+
+
+</android.support.constraint.ConstraintLayout>
